@@ -1,0 +1,10 @@
+# THERMAN DC RESULTS
+# TASK=c:/work\lab03.thc
+# Resolution= 128x128
+# SHAPE PROBES    (S label,x[m],y[m])
+# EXPLICIT PROBES (E label,x[m],y[m],xrepetit,yrepetit,dx[m],dy[m])
+# MODEL PROBES    (M label)
+# S TRANS01           1.5200e-004  7.9750e-004
+# S TRANS02           7.2450e-004  7.5650e-004
+ndata= 2
+ 2.6430e+001  2.3734e+001 

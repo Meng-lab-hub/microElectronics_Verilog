@@ -1,0 +1,7 @@
+1. For cmos circuit, if the topology is series in pMOS then it must be nMOS in parallel
+2. pMOS connects to VDD, nMOS connect to GND
+3. for pMOS: 0V means short-circuit, for nMOS: 0V means open-circuit
+4. Output of the circuit is the connection point of pMOS and nMOS circuits (usually at the middle)
+5. if pMOS is in parallel and nMOS is in series: NOT(A AND B)
+	if pMOS is in series and nMOS is in parallel: NOT(A OR B)
+6. if we want A AND B instead of NOT(A AND B), we connect the inverter to the output of the NOT(A AND B)

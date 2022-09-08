@@ -1,0 +1,47 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY TEST_FULLADDER_g2 IS
+END TEST_FULLADDER_g2;
+
+ARCHITECTURE TEST_BEHAVIORAL of TEST_FULLADDER_g2 is
+	
+	SIGNAL A : STD_LOGIC;
+	SIGNAL B : STD_LOGIC;
+	SIGNAL CIN : STD_LOGIC;
+	SIGNAL SUM : STD_LOGIC;
+	SIGNAL CARRY : STD_LOGIC;
+	
+	COMPONENT FULLADDER_g2
+		PORT (A        : in STD_LOGIC;
+		      B        : in STD_LOGIC;
+		      CARRY_IN : in STD_LOGIC;
+		      SUM      : out STD_LOGIC;
+		      CARRY    : out STD_LOGIC);
+	END COMPONENT;
+
+BEGIN
+	DUT:FULLADDER_g2
+		PORT MAP (A,B,CIN,SUM,CARRY);
+	
+	STIMULUS: PROCESS
+	BEGIN
+		A <= '0' ; B <= '0'; CIN <= '0';
+		WAIT FOR 100 NS ;
+		A <= '0' ; B <= '0'; CIN <= '1';
+		WAIT FOR 100 NS ;
+		A <= '0' ; B <= '1'; CIN <= '0';
+		WAIT FOR 100 NS ;
+		A <= '0' ; B <= '1'; CIN <= '1';
+		WAIT FOR 100 NS ;
+		A <= '1' ; B <= '0'; CIN <= '0';
+		WAIT FOR 100 NS ;
+		A <= '1' ; B <= '0'; CIN <= '1';
+		WAIT FOR 100 NS ;
+		A <= '1' ; B <= '1'; CIN <= '0';
+		WAIT FOR 100 NS ;
+		A <= '1' ; B <= '1'; CIN <= '1';
+		WAIT FOR 100 NS ;
+	WAIT;
+	END PROCESS;
+END TEST_BEHAVIORAL;

@@ -1,0 +1,25 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY En2 IS 
+  PORT (
+    x : in STD_LOGIC;
+    y : in STD_LOGIC;
+    Cin : in STD_LOGIC;
+    Sum : out STD_LOGIC;
+    Cout : out STD_LOGIC
+  );
+
+END En2;
+
+ARCHITECTURE Func2 OF En2 IS
+  SIGNAL p : STD_LOGIC;
+  SIGNAL r : STD_LOGIC;
+  SIGNAL s : STD_LOGIC;
+BEGIN
+  P <= x XOR y;
+  r <= p AND Cin;
+  s <= x AND y;
+  Sum = p XOR Cin;
+  Cout = r OR s;
+END Func2;
